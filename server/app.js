@@ -6,6 +6,15 @@ const express = require('express')
 const app = express()
 const port = 3000
 const web = require('./routes/web')
+const connectDB = require('./db/connectDB')
+
+
+
+// connect db
+connectDB()
+
+
+
 
 app.use('/api',web)
 
